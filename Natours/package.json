@@ -4,11 +4,13 @@
   "description": "Natural tuours project",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "lite-server"
   },
   "author": "Tan Bui",
   "license": "ISC",
   "devDependencies": {
+    "lite-server": "^2.4.0",
     "node-sass": "^4.9.4"
   }
 }

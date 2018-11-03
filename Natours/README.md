@@ -6,4 +6,4 @@ Natural Tours project for practicing Advanced CSS
 
 #### Deployment
 * Run `npm run compile:sass`
-* Run index.html
+* Run in a second terminal `npm start`
