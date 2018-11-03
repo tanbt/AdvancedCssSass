@@ -5,5 +5,8 @@ Natural Tours project for practicing Advanced CSS
 * Inside NATOURS directory (project root), run `npm install`
 
 #### Deployment
-* Run `npm run compile:sass`
-* Run in a second terminal `npm start`
+* Run `gulp`
+
+#### References
+* SASS compiler and [reload](https://scotch.io/tutorials/how-to-use-browsersync-for-faster-development) with [gulp](https://browsersync.io/docs/gulp)
+* For compiling Javascript ES6 with gulp, check my [Krippendorff's alpha library](https://github.com/tanbt/krippendorff-alpha)
