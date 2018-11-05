@@ -23,52 +23,47 @@ body {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  /*keep top of img when resize*/
+  /* keep top of img when resize */
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  /*parent should have position relative*/
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    /* parent should have position relative */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: white;
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
-  /*fix shaking after animation*/
+  /* fix shaking after animation */
   margin-bottom: 8rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  /*animation-delay: 0.5s;
-    animation-iteration-count: 3;
-    animation-timing-function: ease-out;*/ }
-
-.heading-primary--sub {
-  display: block;
-  /*required for using animation*/
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.5rem;
-  animation: moveInRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* animation-delay: 0.5s;
+      animation-iteration-count: 3;
+      animation-timing-function: ease-out; */ }
+  .heading-primary--sub {
+    display: block;
+    /* required for using animation */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -104,18 +99,21 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  /*IMPORTANT: all properties are changed smoothly, avoid flickering*/
-  transition: all .2s;
+  /* IMPORTANT: all properties are changed smoothly, avoid flickering */
+  transition: all 0.2s;
   position: relative;
-  /*et this for .btn::after*/
+  /* et this for .btn::after */
   font-size: 1.6rem; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
-  /*click*/
+  /* click */
   transform: translateY(-0.1rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
@@ -129,21 +127,16 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s;
-  /*should be used with any changing effect*/ }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  transition: all 0.4s;
+  /* should be used with any changing effect */ }
 
 .btn--white {
   background-color: white;
   color: #777; }
-
-.btn--white::after {
-  background-color: white; }
+  .btn--white::after {
+    background-color: white; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
-  /*apply 0% style before animation starts*/ }
+  /* apply 0% style before animation starts */ }
