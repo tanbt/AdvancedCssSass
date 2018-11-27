@@ -12,6 +12,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
   }
 
   &__background {
@@ -26,24 +27,32 @@
       $color-primary-dark
     );
     z-index: 1000;
-    transform: scale(120);
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition:         all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); //easings.net
   }
+
   &__nav {
     height: 100vh;
-    width: 100vw;
+    width: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 1500;
+    opacity: 0;
+    transition: all .5s;
   }
+
   &__list {
     @include centralize;
     list-style: none;
     text-align: center;
+    width: 100%;
   }
+
   &__item {
     margin: 1rem;
   }
+
   &__link {
     &:link,
     &:visited {
@@ -62,10 +71,9 @@
       );
       background-size: 220%;
       transition: all 0.4s;
-
       span {
-          margin-right: 1.5rem;
-          display: inline-block;
+        margin-right: 1.5rem;
+        display: inline-block;
       }
     }
     &:hover,
@@ -74,5 +82,14 @@
       color: $color-primary;
       transform: translateX(1rem);
     }
+  }
+
+  &__checkbox:checked ~ &__background {
+      transform: scale(120);
+  }
+
+  &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100vw;
   }
 }
