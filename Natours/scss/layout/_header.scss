@@ -21,10 +21,7 @@
     height: 3.5rem;
   }
   &__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include centralize;
     text-align: center;
   }
 }
