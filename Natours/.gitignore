@@ -2,3 +2,7 @@ bower_components
 node_modules
 .idea
 .history
+main.comp.css
+main.concat.css
+main.prefix.css
+main.css
